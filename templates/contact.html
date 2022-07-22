@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block tabla %}
+    <p>Aquí ponemos la tabla</p>
+{% endblock tabla %}
+{% block content %}
+    <h1>Contacto</h1>
+    <p>{{ my_text }}</p>
+    <p>{{ my_number }}</p>
+    <ul>
+        {% for item in my_list %}
+            {% if item == 125 %}
+                <li>{{forloop.counter}} - {{item|add:20}}</li>
+            {% else %}
+                <li>{{forloop.counter}} - {{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
